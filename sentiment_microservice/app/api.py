@@ -6,5 +6,5 @@ router = APIRouter(prefix="/sentiment", tags=["sentiment"])
 
 @router.post("/analyze", response_model=SentimentOutput)
 def analyze(input: TextInput):
-    sentiment = analyze_sentiment(input.text)
-    return SentimentOutput(sentiment=sentiment)
+    sentiment_result = analyze_sentiment(input.text)
+    return SentimentOutput(sentiment=sentiment_result)
