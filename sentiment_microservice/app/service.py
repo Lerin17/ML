@@ -2,10 +2,10 @@ from textblob import TextBlob
 
 def analyze_sentiment(text: str) -> str:
     analysis = TextBlob(text)
-    polarity = analysis.sentiment.polarity
+    polarity:any = analysis.sentiment.polarity
     if polarity > 0:
-        return "positive"
+        return {polarity: "positive"}
     elif polarity == 0:
-        return "neutral"
+        return {polarity: "neutral"}
     else:
-        return "negative"
+        return {polarity:"negative"}

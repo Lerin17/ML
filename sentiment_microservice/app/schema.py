@@ -5,3 +5,4 @@ class TextInput(BaseModel):
 
 class SentimentOutput(BaseModel):
     sentiment: str
+    # sentiment_score: float = None  # Optional field for sentiment score
